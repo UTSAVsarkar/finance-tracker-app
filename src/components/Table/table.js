@@ -24,12 +24,11 @@ export default function TableComponent({ dataArray }) {
     <Paper
       sx={{
         overflow: "hidden",
-        marginTop: "8%",
+        marginTop: "5%",
         backgroundColor: "rgba(255,255,255,0.1)",
         backdropFilter: "blur(30px)",
         color: "rgba(255,255,255,0.8)",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2),0 1px 3px rgba(0, 0, 0,0.4))",
-        borderRadius: 4,
       }}
     >
       <TableContainer

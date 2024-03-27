@@ -21,7 +21,7 @@ export default function BasicButtons() {
       case 0:
         return <TableComponent dataArray={data} />;
       case 1:
-        return <Dashboard />;
+        return <Dashboard data={data} />;
     }
   };
 
