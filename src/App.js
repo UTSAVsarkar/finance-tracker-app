@@ -40,7 +40,7 @@ export default function BasicButtons() {
                 background: "rgba(255, 255, 255, 0.2)",
                 backdropFilter: "blur(10px)" /* Glassy effect */,
                 boxShadow:
-                  "0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3)",
+                  "0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)",
                 transition: "background 0.3s ease, color 0.3s ease",
                 color: "white",
                 fontSize: "16px",
@@ -74,7 +74,7 @@ export default function BasicButtons() {
                 background: "rgba(255, 255, 255, 0.2)",
                 backdropFilter: "blur(10px)" /* Glassy effect */,
                 boxShadow:
-                  "0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3)",
+                  "0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)",
                 transition: "background 0.3s ease, color 0.3s ease",
                 color: "white",
                 fontSize: "16px",
@@ -93,7 +93,7 @@ export default function BasicButtons() {
                 background: "rgba(255, 255, 255, 0.2)",
                 backdropFilter: "blur(10px)" /* Glassy effect */,
                 boxShadow:
-                  "0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3)",
+                  "0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)",
                 transition: "background 0.3s ease, color 0.3s ease",
                 color: "white",
                 fontSize: "16px",
@@ -158,6 +158,8 @@ export default function BasicButtons() {
                 position: "absolute",
                 margin: 10,
                 left: 0,
+                boxShadow:
+                  "0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)",
               }}
               onMouseEnter={() => setIsHovered2(true)} // Set hover state to true on mouse enter
               onMouseLeave={() => setIsHovered2(false)} // Set hover state to false on mouse leave
@@ -178,8 +180,7 @@ export default function BasicButtons() {
     <>
       <div
         style={{
-          backgroundImage:
-            "linear-gradient(to right top, #3b6097, #2e4d7e, #203b65, #13294d, #051937)",
+          backgroundColor: "#17202A",
           minHeight: "100vh",
           justifyContent: "center",
           alignItems: "center",
@@ -193,7 +194,7 @@ export default function BasicButtons() {
             borderRadius: 16,
             minHeight: "90vh",
             minWidth: "90vw",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.4)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
             backdropFilter: "blur(5.4px)",
             WebkitBackdropFilter: "blur(5.4px)",
             border: "1px solid rgba(255, 255, 255, 0.17)",
@@ -222,6 +223,8 @@ export default function BasicButtons() {
               position: "absolute",
               margin: 10,
               right: 0,
+              boxShadow:
+                "0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)",
             }}
             onMouseEnter={() => setIsHovered(true)} // Set hover state to true on mouse enter
             onMouseLeave={() => setIsHovered(false)} // Set hover state to false on mouse leave

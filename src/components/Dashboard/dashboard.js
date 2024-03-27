@@ -38,17 +38,17 @@ export default function Dashboard({ data }) {
               height: "5rem",
               background: "rgba(255, 255, 255, 0.16)",
               borderRadius: 16,
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
               WebkitBackdropFilter: "blur(5.4px)",
               border: "1px solid rgba(255, 255, 255, 0.17)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              color: "white",
+              color: "rgb(72, 201, 176)",
             }}
           >
-            {`Total Amount: ₹${totalAmount()}`}
+            <b>{`Total Amount: ₹${totalAmount()}`}</b>
           </div>
           <div
             style={{
@@ -56,17 +56,19 @@ export default function Dashboard({ data }) {
               height: "5rem",
               background: "rgba(255, 255, 255, 0.16)",
               borderRadius: 16,
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
               WebkitBackdropFilter: "blur(5.4px)",
               border: "1px solid rgba(255, 255, 255, 0.17)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              color: "white",
+              color: "rgb(72, 201, 176)",
             }}
           >
-            {`Avg. Daily Expense: ₹${parseInt(totalAmount() / data.length)}`}
+            <b>
+              {`Avg. Daily Expense: ₹${parseInt(totalAmount() / data.length)}`}
+            </b>
           </div>
           <div
             style={{
@@ -74,17 +76,17 @@ export default function Dashboard({ data }) {
               height: "5rem",
               background: "rgba(255, 255, 255, 0.16)",
               borderRadius: 16,
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
               WebkitBackdropFilter: "blur(5.4px)",
               border: "1px solid rgba(255, 255, 255, 0.17)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              color: "white",
+              color: "rgb(72, 201, 176)",
             }}
           >
-            {`Max. Amount Paid: ₹${maxAmount()}`}
+            <b>{`Max. Amount Paid: ₹${maxAmount()}`}</b>
           </div>
           <div
             style={{
@@ -92,17 +94,17 @@ export default function Dashboard({ data }) {
               height: "5rem",
               background: "rgba(255, 255, 255, 0.16)",
               borderRadius: 16,
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
               WebkitBackdropFilter: "blur(5.4px)",
               border: "1px solid rgba(255, 255, 255, 0.17)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              color: "white",
+              color: "rgb(72, 201, 176)",
             }}
           >
-            {`Min. Amount Paid: ₹${minAmount()}`}
+            <b>{`Min. Amount Paid: ₹${minAmount()}`}</b>
           </div>
         </Stack>
         <Stack direction="row" spacing={5}>
@@ -112,7 +114,7 @@ export default function Dashboard({ data }) {
               height: "33rem",
               background: "rgba(255, 255, 255, 0.16)",
               borderRadius: 16,
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
               WebkitBackdropFilter: "blur(5.4px)",
               border: "1px solid rgba(255, 255, 255, 0.17)",
@@ -130,7 +132,7 @@ export default function Dashboard({ data }) {
                 height: "16rem",
                 background: "rgba(255, 255, 255, 0.16)",
                 borderRadius: 16,
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
                 backdropFilter: "blur(5.4px)",
                 WebkitBackdropFilter: "blur(5.4px)",
                 border: "1px solid rgba(255, 255, 255, 0.17)",
@@ -147,7 +149,7 @@ export default function Dashboard({ data }) {
                 height: "16rem",
                 background: "rgba(255, 255, 255, 0.16)",
                 borderRadius: 16,
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
                 backdropFilter: "blur(5.4px)",
                 WebkitBackdropFilter: "blur(5.4px)",
                 border: "1px solid rgba(255, 255, 255, 0.17)",

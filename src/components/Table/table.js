@@ -25,9 +25,8 @@ export default function TableComponent({ dataArray }) {
       sx={{
         overflow: "hidden",
         marginTop: "5%",
-        backgroundColor: "rgba(255,255,255,0.1)",
+        backgroundColor: "#17202A",
         backdropFilter: "blur(30px)",
-        color: "rgba(255,255,255,0.8)",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2),0 1px 3px rgba(0, 0, 0,0.4))",
       }}
     >
@@ -46,15 +45,15 @@ export default function TableComponent({ dataArray }) {
                   align={column.align}
                   style={{
                     minWidth: column.minWidth,
-                    backgroundColor: "rgba(79, 70, 174)",
+                    backgroundColor: "#148F77",
                     backdropFilter: "blur(20px)",
                     WebkitBackdropFilter: "blur(20px)",
-                    borderBottomColor: "rgba(79, 70, 174)",
+                    borderBottomColor: "#148F77",
                     color: "white",
                     fontSize: 16,
                   }}
                 >
-                  {column.label}
+                  <b>{column.label}</b>
                 </TableCell>
               ))}
             </TableRow>
@@ -71,7 +70,7 @@ export default function TableComponent({ dataArray }) {
                         align={column.align}
                         style={{
                           fontSize: 15,
-                          color: "rgba(255,255,255,0.8)",
+                          color: "#48C9B0",
                           borderBottomColor: "rgba(255,255,255,0.3)",
                         }}
                       >
