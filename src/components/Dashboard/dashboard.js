@@ -71,6 +71,31 @@ export default function Dashboard({ data }) {
     return yearMap;
   };
 
+  const yearlyMonthWiseItems = () => {
+    const yearMap = new Map();
+
+    data.forEach((item) => {
+      const dateParts = item.date.split("/");
+      const year = parseInt(dateParts[2]);
+      const month = parseInt(dateParts[1]);
+
+      if (!yearMap.has(year)) {
+        yearMap.set(year, new Map());
+      }
+
+      const monthMap = yearMap.get(year);
+
+      if (!monthMap.has(month)) {
+        monthMap.set(month, 0);
+      }
+
+      const currentCount = monthMap.get(month);
+      monthMap.set(month, currentCount + 1);
+    });
+
+    return yearMap;
+  };
+
   return (
     <div
       style={{
@@ -207,7 +232,7 @@ export default function Dashboard({ data }) {
                 alignItems: "center",
               }}
             >
-              <LineGraph />
+              <LineGraph yearlyMonthWiseItems={yearlyMonthWiseItems()} />
             </div>
           </Stack>
         </Stack>

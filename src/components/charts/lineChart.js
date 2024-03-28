@@ -1,7 +1,6 @@
 import * as React from "react";
 import { LineChart } from "@mui/x-charts/LineChart";
 
-const pData = [20, 18, 98, 30, 40, 30, 40, 40, 40, 40, 40, 40];
 const xLabels = [
   "Jan",
   "Feb",
@@ -17,17 +16,27 @@ const xLabels = [
   "Dec",
 ];
 
-export default function LineGraph() {
+export default function LineGraph({ yearlyMonthWiseItems }) {
+  const createData = () => {
+    const yearlyData = yearlyMonthWiseItems;
+    const data = [];
+    yearlyData.forEach((monthMap, year) => {
+      const arr = Array.from({ length: 12 }, () => 0);
+      monthMap.forEach((count, month) => {
+        arr[month - 1] += count;
+      });
+      data.push({
+        data: arr,
+        label: `${year} month wise items`,
+      });
+    });
+
+    return data;
+  };
+
   return (
     <LineChart
-      series={[
-        {
-          data: pData,
-          label: "Month vs No. of Items",
-          color: "rgb(72, 201, 176)",
-          area: true,
-        },
-      ]}
+      series={createData()}
       xAxis={[{ scaleType: "point", data: xLabels }]}
     />
   );

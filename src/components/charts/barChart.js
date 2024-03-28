@@ -17,8 +17,6 @@ const xLabels = [
 ];
 
 export default function BarGraph({ yearlyMonthWiseCost }) {
-  console.log(yearlyMonthWiseCost);
-
   const createData = () => {
     const yearlyData = yearlyMonthWiseCost;
 
