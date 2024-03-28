@@ -6,7 +6,7 @@ export const dataArray = [
   },
   {
     title: "Chocolate Bars",
-    date: "22/7/2023",
+    date: "22/7/2024",
     price: 15,
   },
   {
@@ -16,7 +16,7 @@ export const dataArray = [
   },
   {
     title: "Mixed Nuts",
-    date: "18/4/2023",
+    date: "18/4/2024",
     price: 12,
   },
   {
@@ -26,12 +26,12 @@ export const dataArray = [
   },
   {
     title: "Beef Jerky",
-    date: "14/1/2023",
+    date: "14/1/2024",
     price: 7,
   },
   {
     title: "Granola Bars",
-    date: "27/8/2023",
+    date: "27/8/2024",
     price: 9,
   },
   {
@@ -51,7 +51,7 @@ export const dataArray = [
   },
   {
     title: "Pretzels",
-    date: "31/10/2023",
+    date: "31/10/2024",
     price: 16,
   },
   {
@@ -61,7 +61,7 @@ export const dataArray = [
   },
   {
     title: "Potato Chips",
-    date: "25/7/2023",
+    date: "25/7/2024",
     price: 6,
   },
   {
@@ -71,7 +71,7 @@ export const dataArray = [
   },
   {
     title: "Soda Cans",
-    date: "20/1/2023",
+    date: "20/1/2024",
     price: 5,
   },
   {

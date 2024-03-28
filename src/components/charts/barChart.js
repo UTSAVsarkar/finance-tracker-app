@@ -1,74 +1,50 @@
 import * as React from "react";
 import { BarChart } from "@mui/x-charts/BarChart";
 
-const dataset = [
-  {
-    price: 21,
-    month: "Jan",
-  },
-  {
-    price: 28,
-    month: "Fev",
-  },
-  {
-    price: 41,
-    month: "Mar",
-  },
-  {
-    price: 73,
-    month: "Apr",
-  },
-  {
-    price: 99,
-    month: "May",
-  },
-  {
-    price: 144,
-    month: "June",
-  },
-  {
-    price: 319,
-    month: "July",
-  },
-  {
-    price: 249,
-    month: "Aug",
-  },
-  {
-    price: 131,
-    month: "Sept",
-  },
-  {
-    price: 55,
-    month: "Oct",
-  },
-  {
-    price: 48,
-    month: "Nov",
-  },
-  {
-    price: 25,
-    month: "Dec",
-  },
+const xLabels = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "July",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 
-const valueFormatter = (value) => `${value}mm`;
+export default function BarGraph({ yearlyMonthWiseCost }) {
+  console.log(yearlyMonthWiseCost);
 
-export default function BarGraph() {
+  const createData = () => {
+    const yearlyData = yearlyMonthWiseCost;
+
+    const data = [];
+    yearlyData.forEach((monthMap, year) => {
+      const arr = Array.from({ length: 12 }, () => 0);
+
+      monthMap.forEach((price, month) => {
+        arr[month - 1] += price;
+      });
+
+      data.push({
+        data: arr,
+        label: `${year} month wise cost`,
+        id: year,
+        stack: "total",
+      });
+    });
+
+    return data;
+  };
+
   return (
     <BarChart
-      dataset={dataset}
-      yAxis={[{ scaleType: "band", dataKey: "month" }]}
-      series={[
-        {
-          dataKey: "price",
-          label: "Month vs Total Cost",
-          valueFormatter,
-          color: "rgb(72, 201, 176)",
-        },
-      ]}
-      layout="horizontal"
-      colors={["rgb(72, 201, 176)"]}
+      series={createData()}
+      xAxis={[{ data: xLabels, scaleType: "band" }]}
     />
   );
 }

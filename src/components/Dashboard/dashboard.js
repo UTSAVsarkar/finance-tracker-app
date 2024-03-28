@@ -45,6 +45,32 @@ export default function Dashboard({ data }) {
     return newMap;
   };
 
+  const yearlyMonthWiseCost = () => {
+    const yearMap = new Map();
+
+    data.forEach((item) => {
+      const dateParts = item.date.split("/");
+      const year = parseInt(dateParts[2]);
+      const month = parseInt(dateParts[1]);
+      const price = item.price;
+
+      if (!yearMap.has(year)) {
+        yearMap.set(year, new Map());
+      }
+
+      const monthMap = yearMap.get(year);
+
+      if (!monthMap.has(month)) {
+        monthMap.set(month, 0);
+      }
+
+      const currentPrice = monthMap.get(month);
+      monthMap.set(month, currentPrice + price);
+    });
+
+    return yearMap;
+  };
+
   return (
     <div
       style={{
@@ -146,7 +172,7 @@ export default function Dashboard({ data }) {
               alignItems: "center",
             }}
           >
-            <BarGraph />
+            <BarGraph yearlyMonthWiseCost={yearlyMonthWiseCost()} />
           </div>
           <Stack spacing={1.5}>
             <div
