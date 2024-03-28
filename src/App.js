@@ -14,7 +14,7 @@ export default function BasicButtons() {
   const [data, setData] = React.useState(dataArray);
   const [page, setPage] = React.useState(0);
   const [title, setTitle] = React.useState("");
-  const [price, setPrice] = React.useState("");
+  const [price, setPrice] = React.useState();
 
   const renderMainElement = () => {
     switch (page) {
@@ -84,7 +84,7 @@ export default function BasicButtons() {
                 paddingLeft: 15,
                 width: "25%",
               }}
-              onChange={(e) => setPrice(e.currentTarget.value)}
+              onChange={(e) => setPrice(parseInt(e.currentTarget.value))}
             />
             <div
               style={{
@@ -113,7 +113,7 @@ export default function BasicButtons() {
               onMouseEnter={() => setIsHovered1(true)} // Set hover state to true on mouse enter
               onMouseLeave={() => setIsHovered1(false)} // Set hover state to false on mouse leave
               onClick={() => {
-                setPrice("");
+                setPrice();
                 setTitle("");
                 const date = new Date();
                 const day = date.getDay();

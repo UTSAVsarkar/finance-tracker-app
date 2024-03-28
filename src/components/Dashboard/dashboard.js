@@ -1,4 +1,8 @@
 import Stack from "@mui/material/Stack";
+import LineGraph from "../charts/lineChart";
+import PieGraph from "../charts/pieCharts";
+import BarGraph from "../charts/barChart";
+import { useEffect } from "react";
 
 export default function Dashboard({ data }) {
   const totalAmount = () => {
@@ -20,6 +24,25 @@ export default function Dashboard({ data }) {
     let newArray = [];
     data.map((i) => newArray.push(i.price));
     return Math.min.apply(null, newArray);
+  };
+
+  const totalCostYearly = () => {
+    const newMap = new Map();
+    const yearList = [];
+
+    data.map((i) => {
+      const year = parseInt(i.date.split("/")[2]);
+
+      if (yearList.includes(year)) {
+        const currentPrice = newMap.get(year);
+        newMap.set(year, currentPrice + i.price);
+      } else {
+        yearList.push(year);
+        newMap.set(year, i.price);
+      }
+    });
+
+    return newMap;
   };
 
   return (
@@ -123,7 +146,7 @@ export default function Dashboard({ data }) {
               alignItems: "center",
             }}
           >
-            box1
+            <BarGraph />
           </div>
           <Stack spacing={1.5}>
             <div
@@ -141,7 +164,7 @@ export default function Dashboard({ data }) {
                 alignItems: "center",
               }}
             >
-              box1
+              <PieGraph totalCostYearly={totalCostYearly()} />
             </div>
             <div
               style={{
@@ -158,7 +181,7 @@ export default function Dashboard({ data }) {
                 alignItems: "center",
               }}
             >
-              box1
+              <LineGraph />
             </div>
           </Stack>
         </Stack>
