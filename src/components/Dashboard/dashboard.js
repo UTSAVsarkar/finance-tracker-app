@@ -110,7 +110,7 @@ export default function Dashboard({ data }) {
             style={{
               width: "18rem",
               height: "5rem",
-              background: "rgba(255, 255, 255, 0.16)",
+              background: "#17202a",
               borderRadius: 16,
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
@@ -128,7 +128,7 @@ export default function Dashboard({ data }) {
             style={{
               width: "18rem",
               height: "5rem",
-              background: "rgba(255, 255, 255, 0.16)",
+              background: "#17202a",
               borderRadius: 16,
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
@@ -148,7 +148,7 @@ export default function Dashboard({ data }) {
             style={{
               width: "18rem",
               height: "5rem",
-              background: "rgba(255, 255, 255, 0.16)",
+              background: "#17202a",
               borderRadius: 16,
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
@@ -166,7 +166,7 @@ export default function Dashboard({ data }) {
             style={{
               width: "18rem",
               height: "5rem",
-              background: "rgba(255, 255, 255, 0.16)",
+              background: "#17202a",
               borderRadius: 16,
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
@@ -186,7 +186,7 @@ export default function Dashboard({ data }) {
             style={{
               width: "45rem",
               height: "33rem",
-              background: "rgba(255, 255, 255, 0.16)",
+              background: "white",
               borderRadius: 16,
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(5.4px)",
@@ -204,7 +204,7 @@ export default function Dashboard({ data }) {
               style={{
                 width: "32rem",
                 height: "16rem",
-                background: "rgba(255, 255, 255, 0.16)",
+                background: "white",
                 borderRadius: 16,
                 boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
                 backdropFilter: "blur(5.4px)",
@@ -221,7 +221,7 @@ export default function Dashboard({ data }) {
               style={{
                 width: "32rem",
                 height: "16rem",
-                background: "rgba(255, 255, 255, 0.16)",
+                background: "white",
                 borderRadius: 16,
                 boxShadow: "0 4px 30px rgba(0, 0, 0, 0.7)",
                 backdropFilter: "blur(5.4px)",
